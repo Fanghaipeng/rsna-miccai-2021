@@ -1,0 +1,1 @@
+python main.py --config efficientnet_gru --workers 0 --gpu_id 3 --gpu_num 1

@@ -1,0 +1,31 @@
+modelname: efficientnet3d_b0_lr0.0003_aug256_2
+describe: efficientnet3d_lr0.0003_CELoss_with_augmentation_imgsize256
+
+path:
+  # save models
+  model_dir: ../user_data/models
+  # resume training from a existed model
+  resume_path: ../user_data/models/efficientnet3d_b0_lr0.0003_aug256_2/model_best.pt
+  data_path: /data/zhaoxinying/datasets/dataset
+  # tensorboard savepath
+  writer_path: ../user_data/tensorlog
+  pred_path: ../user_data/preds
+
+train:
+  batchsize: 8
+  imagesize: 256
+  length: 64
+  lr: 0.0003
+  # train epochs
+  niter: 20
+  # whether to save model every * epochs (true or false)
+  step_save: 1
+  # save model every * epochs (nums, 1, 2 etc)
+  save_step: 1
+  # whether to resume from a existed model (true or false)
+  resume: 0
+
+test:
+  test_path: /data/zhaoxinying/datasets/dataset/test
+  batchsize: 1
+  imgsize: 256

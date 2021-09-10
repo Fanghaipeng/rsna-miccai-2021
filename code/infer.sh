@@ -1,0 +1,1 @@
+python inference.py --config efficientnet3d --gpu_id 3 --gpu_num 1
